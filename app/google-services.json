@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "244955810862",
+    "firebase_url": "https://langlearn-1061d.firebaseio.com",
+    "project_id": "langlearn-1061d",
+    "storage_bucket": "langlearn-1061d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244955810862:android:8553cd232dcdaccb",
+        "android_client_info": {
+          "package_name": "com.example.langlearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "244955810862-2uqnk6odr0dlfpsrh2b9sa1ahndkh3ie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.langlearn",
+            "certificate_hash": "ca1dd8030d1262b3b68e2256af7019f669f11d4c"
+          }
+        },
+        {
+          "client_id": "244955810862-ficuupqm4c126tithnr0jq891d7o4adb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkS5W2iDOhQuFXQX_DkfBHDB6EjARZuZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "244955810862-ficuupqm4c126tithnr0jq891d7o4adb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
