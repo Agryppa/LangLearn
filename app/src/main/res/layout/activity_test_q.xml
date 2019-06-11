@@ -8,17 +8,18 @@ android:background="#3F51B5"
 tools:context=".TestActivity" >
 
     <android.support.constraint.ConstraintLayout
-        android:layout_width="356dp"
-        android:layout_height="400dp"
+        android:layout_width="351dp"
+        android:layout_height="447dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="100dp"
         android:background="#00BCD4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.539">
 
         <RadioButton
             android:id="@+id/radioA"
@@ -31,10 +32,9 @@ tools:context=".TestActivity" >
             android:text="RadioButton"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.355" />
+            app:layout_constraintVertical_bias="0.443" />
 
         <RadioButton
             android:id="@+id/radioB"
@@ -49,7 +49,7 @@ tools:context=".TestActivity" >
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.446" />
+            app:layout_constraintVertical_bias="0.533" />
 
         <RadioButton
             android:id="@+id/radioC"
@@ -64,7 +64,7 @@ tools:context=".TestActivity" >
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.536" />
+            app:layout_constraintVertical_bias="0.624" />
 
         <RadioButton
             android:id="@+id/radioD"
@@ -79,7 +79,7 @@ tools:context=".TestActivity" >
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.625" />
+            app:layout_constraintVertical_bias="0.704" />
 
         <Button
             android:id="@+id/checkButton"
@@ -107,8 +107,10 @@ tools:context=".TestActivity" >
             android:text=""
             app:layout_constraintBottom_toTopOf="@+id/radioA"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.617" />
 
 
     </android.support.constraint.ConstraintLayout>

@@ -33,12 +33,13 @@ public class Chapters extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Toast.makeText(getApplicationContext(),
-                        "Click ListItem Number " + position, Toast.LENGTH_LONG)
-                        .show();
+//                Toast.makeText(getApplicationContext(),
+//                        "Click ListItem Number " + position, Toast.LENGTH_LONG)
+//                        .show();
                 Intent i=new Intent(getApplicationContext(), TestActivity.class);
                 i.putExtra("pos", position);
-                startActivity(i);
+                if(position==0)
+                    startActivity(i);
             }
         });
     }

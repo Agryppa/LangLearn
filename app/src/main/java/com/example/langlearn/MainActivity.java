@@ -56,14 +56,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         Button settingsB= findViewById(R.id.settings_button);
-        /*settingsB.setOnClickListener(new View.OnClickListener() {
+        settingsB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Chapters.class);
+                Intent i = new Intent(getApplicationContext(), Settings.class);
                 startActivity(i);
 
             }
-        });*/
+        });
         chapterB.setBackgroundColor(getResources().getColor(R.color.button));
         settingsB.setBackgroundColor(getResources().getColor(R.color.button));
         grammarB.setBackgroundColor(getResources().getColor(R.color.button));

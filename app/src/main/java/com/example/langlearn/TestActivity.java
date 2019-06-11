@@ -1,5 +1,6 @@
 package com.example.langlearn;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -76,6 +77,8 @@ public class TestActivity extends AppCompatActivity {
                     currQ++;
                     if(currQ==qlist.size()){
                         Toast.makeText(getApplicationContext(), "Kapitel beendet!", Toast.LENGTH_SHORT).show();
+                        Intent i=new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(i);
                     }else{
                         question.setText(qlist.get(currQ).getQuestion());
                         rba.setText(qlist.get(currQ).getA());

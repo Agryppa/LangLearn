@@ -19,7 +19,7 @@ tools:context=".GrammarEx" >
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.101">
+        app:layout_constraintVertical_bias="0.192">
 
         <EditText
             android:id="@+id/answerGrammar"
