@@ -63,7 +63,7 @@
             android:layout_marginBottom="8dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="login"
+            android:text=""
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
@@ -112,7 +112,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:background="#1F39CA"
-            android:text="Utwórz konto"
+            android:text="Confirm"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
