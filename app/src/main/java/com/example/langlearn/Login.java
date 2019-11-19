@@ -84,11 +84,11 @@ public class Login extends AppCompatActivity {
                 String passwordT;
                 loginT=loginTV.getText().toString();
                 passwordT=passTV.getText().toString();
-                if(checkLogin(loginT,passwordT)){
+                //if(checkLogin(loginT,passwordT)){
                     Intent i=new Intent(getApplicationContext(),MainActivity.class);
                     i.putExtra("login", loginT);
                     startActivity(i);
-                }
+                //}
             }
         });
 

@@ -15,8 +15,8 @@ public class GrammarActivity extends AppCompatActivity {
     private ArrayList<Chapter> chapters;
     private void fill(){
         chapters=new ArrayList<>();
-        chapters.add(new Chapter("Kapitel 1", 0, R.drawable.de));
-        chapters.add(new Chapter("Kapitel 2", 1, R.drawable.de));
+        chapters.add(new Chapter(getString(R.string.kapitel)+"1", 0, R.drawable.de));
+        chapters.add(new Chapter(getString(R.string.kapitel)+"2", 1, R.drawable.de));
 
 
     }
@@ -35,9 +35,9 @@ public class GrammarActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Toast.makeText(getApplicationContext(),
+                /*Toast.makeText(getApplicationContext(),
                         "Click ListItem Number " + position, Toast.LENGTH_LONG)
-                        .show();
+                        .show();*/
                 Intent i=new Intent(getApplicationContext(), GrammarEx.class);
                 i.putExtra("pos", position);
                 startActivity(i);
