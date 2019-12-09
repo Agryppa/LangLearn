@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -101,13 +102,14 @@ public class TestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_test_q);
         getSupportActionBar().hide();
 
-        if(chapterN==0)
-            fill();
+        fill();
         final Button question=findViewById(R.id.questionTextB1);
         final RadioButton rba=findViewById(R.id.radioA);
         final RadioButton rbb=findViewById(R.id.radioB);
         final RadioButton rbc=findViewById(R.id.radioC);
         final RadioButton rbd=findViewById(R.id.radioD);
+        final RadioGroup group = findViewById(R.id.radioGroup);
+
         Button checkB=findViewById(R.id.checkButton);
         checkB.setBackgroundColor(getResources().getColor(R.color.button));
         //checkB.setTextColor(getResources().getColor(R.color.background));
@@ -125,42 +127,47 @@ public class TestActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 boolean f=false;
+
                 switch(qlist.get(currQ).getRight()) {
                     case 1:
                         if(rba.isChecked())
                             f=true;
-                        rba.setChecked(false);
+
                         break;
                     case 2:
                         if(rbb.isChecked())
                             f=true;
-                        rbb.setChecked(false);
+
                         break;
                     case 3:
                         if(rbc.isChecked())
                             f=true;
-                        rbc.setChecked(false);
+
                         break;
                     case 4:
                         if(rbd.isChecked())
                             f=true;
-                        rbd.setChecked(false);
+
                         break;
                 }
+                group.clearCheck();
                 if(f){
                     Toast.makeText(getApplicationContext(), getString(R.string.right), Toast.LENGTH_SHORT).show();
                     currQ++;
                     if(currQ==qlist.size()){
                         Toast.makeText(getApplicationContext(), getString(R.string.chapter_end), Toast.LENGTH_SHORT).show();
                         open();
-                        Intent i=new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(i);
+
                     }else{
                         question.setText(qlist.get(currQ).getQuestion());
                         rba.setText(qlist.get(currQ).getA());
                         rbb.setText(qlist.get(currQ).getB());
                         rbc.setText(qlist.get(currQ).getC());
                         rbd.setText(qlist.get(currQ).getD());
+//                        rba.setChecked(false);
+//                        rbb.setChecked(false);
+//                        rbc.setChecked(false);
+//                        rbd.setChecked(false);
                     }
                 }else
                     Toast.makeText(getApplicationContext(),getString(R.string.wrong),Toast.LENGTH_SHORT).show();
@@ -178,16 +185,17 @@ public class TestActivity extends AppCompatActivity {
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface arg0, int arg1) {
-                                Toast.makeText(getApplicationContext(),"You clicked yes button",Toast.LENGTH_LONG).show();
+                                Intent i=new Intent(getApplicationContext(), MainActivity.class);
+                                startActivity(i);
                             }
                         });
 
-        /*alertDialogBuilder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setNegativeButton("No",new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 finish();
             }
-        });*/
+        });
 
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();

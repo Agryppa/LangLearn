@@ -71,8 +71,8 @@ public class Chapters extends AppCompatActivity {
 //                        .show();
                 Intent i=new Intent(getApplicationContext(), TestActivity.class);
                 i.putExtra("pos", position);
-                if(position==0)
-                    startActivity(i);
+
+                startActivity(i);
             }
         });
     }

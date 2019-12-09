@@ -23,6 +23,7 @@ tools:context=".TestActivity" >
         app:layout_constraintVertical_bias="1.0">
 
         <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -37,6 +38,7 @@ tools:context=".TestActivity" >
 
             <RadioButton
                 android:id="@+id/radioA"
+                android:checked="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -52,6 +54,7 @@ tools:context=".TestActivity" >
 
             <RadioButton
                 android:id="@+id/radioB"
+                android:checked="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -67,6 +70,7 @@ tools:context=".TestActivity" >
 
             <RadioButton
                 android:id="@+id/radioC"
+                android:checked="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -82,6 +86,7 @@ tools:context=".TestActivity" >
 
             <RadioButton
                 android:id="@+id/radioD"
+                android:checked="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
