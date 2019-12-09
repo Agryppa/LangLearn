@@ -2,6 +2,7 @@ package com.example.langlearn;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,27 +20,39 @@ public class GrammarEx extends AppCompatActivity {
     private int questionNumber=0;
     private String userAnswer;
 
+    private int getChapterNr(){
+        return getIntent().getIntExtra("pos", 0);
+    }
+
     private Integer getQuestions(){
+        TypedArray chapters;
         switch(getCurrLang()){
             case de:
-                return array.grammarQGER;
+                chapters = getResources().obtainTypedArray(R.array.grammarQGer);
+                return chapters.getResourceId(getChapterNr(), 0);
             case is:
-                return array.grammarQICE;
+                chapters = getResources().obtainTypedArray(R.array.grammarQICE);
+                return chapters.getResourceId(getChapterNr(), 0);
             case cn:
-                return array.grammarQCN;
+                chapters = getResources().obtainTypedArray(R.array.grammarQCN);
+                return chapters.getResourceId(getChapterNr(), 0);
             default:
                 return null;
         }
     }
 
     private Integer getAnswers(){
+        TypedArray answers;
         switch(getCurrLang()){
             case de:
-                return array.grammarAGER;
+                answers = getResources().obtainTypedArray(R.array.grammarAGer);
+                return answers.getResourceId(getChapterNr(), 0);
             case is:
-                return array.grammarAICE;
+                answers = getResources().obtainTypedArray(R.array.grammarAICE);
+                return answers.getResourceId(getChapterNr(), 0);
             case cn:
-                return array.grammarACN;
+                answers = getResources().obtainTypedArray(R.array.grammarACN);
+                return answers.getResourceId(getChapterNr(), 0);
             default:
                 return null;
         }

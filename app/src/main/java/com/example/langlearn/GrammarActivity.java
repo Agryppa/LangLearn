@@ -36,9 +36,9 @@ public class GrammarActivity extends AppCompatActivity {
             case de:
                 return R.array.grammarQGer;
             case is:
-                return R.array.grammarQIce;
+                return R.array.grammarQICE;
             case cn:
-                return R.array.grammarQCn;
+                return R.array.grammarQCN;
             default:
                 return null;
         }

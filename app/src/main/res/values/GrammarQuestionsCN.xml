@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string-array name="grammarQCN">
-      <item> "问题 1"</item>
-      <item> "问题 2"</item>
-      <item> "问题 3"</item>
-  </string-array>
-    <string-array name="grammarACN">
-        <item> " 1"</item>
-        <item> " 2"</item>
-        <item> " 3"</item>
+    <string-array name="grammarQch1CN">
+        <item> "Frage 1"</item>
+        <item> "Frage 2"</item>
+        <item> "Frage 3"</item>
     </string-array>
+    <string-array name="grammarAch1CN">
+        <item> "Antwort 1"</item>
+        <item> "Antwort 2"</item>
+        <item> "Antwort 3"</item>
+    </string-array>
+
+
+    <string-array name="grammarQch2CN">
+        <item> "Frage 1"</item>
+        <item> "Frage 2"</item>
+        <item> "Frage 3"</item>
+    </string-array>
+    <string-array name="grammarAch2CN">
+        <item> "Antwort 1"</item>
+        <item> "Antwort 2"</item>
+        <item> "Antwort 3"</item>
+    </string-array>
+
+    <array name="grammarQCN">
+        <item>@array/grammarQch1CN</item>
+        <item>@array/grammarQch2CN</item>
+    </array>
+
+    <array name="grammarACN">
+        <item>@array/grammarAch1CN</item>
+        <item>@array/grammarAch2CN</item>
+    </array>
 </resources>

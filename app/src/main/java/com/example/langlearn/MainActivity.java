@@ -37,20 +37,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setFlag(){
-        cn.clearColorFilter();
-        ger.clearColorFilter();
-        is.clearColorFilter();
+        ger.setColorFilter(R.color.button);
+        is.setColorFilter(R.color.button);
+        cn.setColorFilter(R.color.button);
         if(getCurrLang()==null)
             return;
         switch(getCurrLang()){
             case de:
-                ger.setColorFilter(R.color.button);
+                ger.clearColorFilter();
                 break;
             case is:
-                is.setColorFilter(R.color.button);
+                is.clearColorFilter();
                 break;
             case cn:
-                cn.setColorFilter(R.color.button);
+                cn.clearColorFilter();
                 break;
             default:
 

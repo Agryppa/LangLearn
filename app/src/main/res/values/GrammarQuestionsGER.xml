@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string-array name="grammarQGER">
+  <string-array name="grammarQch1GER">
       <item> "Frage 1"</item>
       <item> "Frage 2"</item>
       <item> "Frage 3"</item>
   </string-array>
-    <string-array name="grammarAGER">
+    <string-array name="grammarAch1GER">
         <item> "Antwort 1"</item>
         <item> "Antwort 2"</item>
         <item> "Antwort 3"</item>
     </string-array>
+
+
+    <string-array name="grammarQch2GER">
+        <item> "Frage 1"</item>
+        <item> "Frage 2"</item>
+        <item> "Frage 3"</item>
+    </string-array>
+    <string-array name="grammarAch2GER">
+        <item> "Antwort 1"</item>
+        <item> "Antwort 2"</item>
+        <item> "Antwort 3"</item>
+    </string-array>
+
+    <array name="grammarQGer">
+        <item>@array/grammarQch1GER</item>
+        <item>@array/grammarQch2GER</item>
+    </array>
+
+    <array name="grammarAGer">
+        <item>@array/grammarAch1GER</item>
+        <item>@array/grammarAch2GER</item>
+    </array>
+
 </resources>

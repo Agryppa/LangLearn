@@ -1,96 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--chapter 1-->
-    <string-array name="testQICEch1">
-        <item> "A man"</item>
-        <item> "A boy"</item>
-        <item> "A mother"</item>
+    <string-array name="grammarQch1ICE">
+        <item> "Frage 1"</item>
+        <item> "Frage 2"</item>
+        <item> "Frage 3"</item>
+    </string-array>
+    <string-array name="grammarAch1ICE">
+        <item> "Antwort 1"</item>
+        <item> "Antwort 2"</item>
+        <item> "Antwort 3"</item>
     </string-array>
 
-    <string-array name = "A1ICEch1">
-        <item> "Der Mann"</item>
-        <item> "Die Frau"</item>
-        <item> "Das Kind"</item>
-        <item> "Der Sohn"</item>
+
+    <string-array name="grammarQch2ICE">
+        <item> "Frage 1"</item>
+        <item> "Frage 2"</item>
+        <item> "Frage 3"</item>
     </string-array>
-    <string-array name = "A2ICEch1">
-        <item> "Der Junge"</item>
-        <item> "Das Mädchen"</item>
-        <item> "Der Sohn"</item>
-        <item> "Die Tochter"</item>
-    </string-array>
-    <string-array name = "A3ICEch1">
-        <item> "Die Mutter"</item>
-        <item> "Der Vater"</item>
-        <item> "Das Kind"</item>
-        <item> "Die Tante"</item>
+    <string-array name="grammarAch2ICE">
+        <item> "Antwort 1"</item>
+        <item> "Antwort 2"</item>
+        <item> "Antwort 3"</item>
     </string-array>
 
-    <integer-array name="correctICEch1">
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-    </integer-array>
-
-    <array name="refICEch1">
-        <item>@array/A1ICEch1</item>
-        <item>@array/A2ICEch1</item>
-        <item>@array/A3ICEch1</item>
+    <array name="grammarQICE">
+        <item>@array/grammarQch1ICE</item>
+        <item>@array/grammarQch2ICE</item>
     </array>
 
-    <!--chapter 2-->
-    <string-array name="testQICEch2">
-        <item> "I am a boy"</item>
-        <item> "You are a girl"</item>
-        <item> "She is a mother"</item>
-    </string-array>
-
-    <string-array name = "A1ICEch2">
-        <item> "Ich bin ein Junge"</item>
-        <item> "Ich bin ein Kind"</item>
-        <item> "Ich bin ein Mädchen"</item>
-        <item> "Du bist ein Junge"</item>
-    </string-array>
-    <string-array name = "A2ICEch2">
-        <item> "Du bist ein Mann"</item>
-        <item> "Du bist ein Mädchen"</item>
-        <item> "Er ist ein Mädchen"</item>
-        <item> "Er ist eine Frau"</item>
-    </string-array>
-    <string-array name = "A3ICEch2">
-        <item> "Er ist eine Mutter"</item>
-        <item> "Sie ist ein Vater"</item>
-        <item> "Sie ist eine Mutter"</item>
-        <item> "Er ist ein Vater"</item>
-    </string-array>
-
-    <integer-array name="correctICEch2">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-    </integer-array>
-
-    <array name="refICEch2">
-        <item>@array/A1ICEch2</item>
-        <item>@array/A2ICEch2</item>
-        <item>@array/A3ICEch2</item>
+    <array name="grammarAICE">
+        <item>@array/grammarAch1ICE</item>
+        <item>@array/grammarAch2ICE</item>
     </array>
 
 
-
-    <array name="chapterQICE">
-        <item>@array/testQICEch1</item>
-        <item>@array/testQICEch2</item>
-    </array>
-
-    <array name="chapterAICE">
-        <item>@array/refICEch1</item>
-        <item>@array/refICEch2</item>
-    </array>
-
-    <array name="chapterCICE">
-        <item>@array/correctICEch1</item>
-        <item>@array/correctICEch2</item>
-    </array>
 
 </resources>

@@ -1,5 +1,7 @@
 package com.example.langlearn;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.support.v7.app.AppCompatActivity;
@@ -150,6 +152,7 @@ public class TestActivity extends AppCompatActivity {
                     currQ++;
                     if(currQ==qlist.size()){
                         Toast.makeText(getApplicationContext(), getString(R.string.chapter_end), Toast.LENGTH_SHORT).show();
+                        open();
                         Intent i=new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(i);
                     }else{
@@ -165,5 +168,28 @@ public class TestActivity extends AppCompatActivity {
         });
 
 
+    }
+
+
+    public void open(){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setMessage("Are you sure You wanted to make decision");
+                alertDialogBuilder.setPositiveButton("yes",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface arg0, int arg1) {
+                                Toast.makeText(getApplicationContext(),"You clicked yes button",Toast.LENGTH_LONG).show();
+                            }
+                        });
+
+        /*alertDialogBuilder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });*/
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
     }
 }
