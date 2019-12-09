@@ -1,6 +1,7 @@
 package com.example.langlearn;
 
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,17 +11,48 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import static com.example.langlearn.MainActivity.getCurrLang;
+
 public class GrammarActivity extends AppCompatActivity {
 
     private ArrayList<Chapter> chapters;
-    private void fill(){
-        chapters=new ArrayList<>();
-        chapters.add(new Chapter(getString(R.string.kapitel)+"1", 0, R.drawable.de));
-        chapters.add(new Chapter(getString(R.string.kapitel)+"2", 1, R.drawable.de));
 
 
+    private Integer getFlag(){
+        switch(getCurrLang()){
+            case de:
+                return R.drawable.de;
+            case is:
+                return R.drawable.ice;
+            case cn:
+                return R.drawable.prc;
+            default:
+                return null;
+        }
     }
 
+    private Integer getChapters(){
+        switch(getCurrLang()){
+            case de:
+                return R.array.grammarQGer;
+            case is:
+                return R.array.grammarQIce;
+            case cn:
+                return R.array.grammarQCn;
+            default:
+                return null;
+        }
+
+    }
+    private void fill(){
+        chapters=new ArrayList<>();
+        TypedArray res = getResources().obtainTypedArray(getChapters());
+
+        for(int i=0;i<res.length();i++){
+            chapters.add(new Chapter(getString(R.string.chapter)+Integer.toString(i+1),  i, getFlag()));
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

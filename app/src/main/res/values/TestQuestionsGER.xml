@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--chapter 1-->
+  <string-array name="testQGERch1">
+      <item> "A man"</item>
+      <item> "A boy"</item>
+      <item> "A mother"</item>
+  </string-array>
+
+  <string-array name = "A1GERch1">
+      <item> "Der Mann"</item>
+      <item> "Die Frau"</item>
+      <item> "Das Kind"</item>
+      <item> "Der Sohn"</item>
+  </string-array>
+  <string-array name = "A2GERch1">
+      <item> "Der Junge"</item>
+      <item> "Das Mädchen"</item>
+      <item> "Der Sohn"</item>
+      <item> "Die Tochter"</item>
+  </string-array>
+  <string-array name = "A3GERch1">
+      <item> "Die Mutter"</item>
+      <item> "Der Vater"</item>
+      <item> "Das Kind"</item>
+      <item> "Die Tante"</item>
+  </string-array>
+
+  <integer-array name="correctGERch1">
+      <item>1</item>
+      <item>1</item>
+      <item>1</item>
+  </integer-array>
+
+  <array name="refGERch1">
+      <item>@array/A1GERch1</item>
+      <item>@array/A2GERch1</item>
+      <item>@array/A3GERch1</item>
+  </array>
+
+    <!--chapter 2-->
+    <string-array name="testQGERch2">
+        <item> "I am a boy"</item>
+        <item> "You are a girl"</item>
+        <item> "She is a mother"</item>
+    </string-array>
+
+    <string-array name = "A1GERch2">
+        <item> "Ich bin ein Junge"</item>
+        <item> "Ich bin ein Kind"</item>
+        <item> "Ich bin ein Mädchen"</item>
+        <item> "Du bist ein Junge"</item>
+    </string-array>
+    <string-array name = "A2GERch2">
+        <item> "Du bist ein Mann"</item>
+        <item> "Du bist ein Mädchen"</item>
+        <item> "Er ist ein Mädchen"</item>
+        <item> "Er ist eine Frau"</item>
+    </string-array>
+    <string-array name = "A3GERch2">
+        <item> "Er ist eine Mutter"</item>
+        <item> "Sie ist ein Vater"</item>
+        <item> "Sie ist eine Mutter"</item>
+        <item> "Er ist ein Vater"</item>
+    </string-array>
+
+    <integer-array name="correctGERch2">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </integer-array>
+
+    <array name="refGERch2">
+        <item>@array/A1GERch2</item>
+        <item>@array/A2GERch2</item>
+        <item>@array/A3GERch2</item>
+    </array>
+
+
+
+    <array name="chapterQGer">
+        <item>@array/testQGERch1</item>
+        <item>@array/testQGERch2</item>
+    </array>
+
+    <array name="chapterAGer">
+        <item>@array/refGERch1</item>
+        <item>@array/refGERch2</item>
+    </array>
+
+    <array name="chapterCGer">
+        <item>@array/correctGERch1</item>
+        <item>@array/correctGERch2</item>
+    </array>
+
+</resources>

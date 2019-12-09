@@ -1,25 +1,95 @@
 package com.example.langlearn;
 
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import static com.example.langlearn.MainActivity.getCurrLang;
+
 public class TestActivity extends AppCompatActivity {
 
     private ArrayList<TestQ> qlist= new ArrayList<>();
-    int currQ=0;
+    private int currQ=0;
+    private int chapterNr = 0;
+
+    private int getChapterNr(){
+        return getIntent().getIntExtra("pos", 0);
+    }
+
+    private Integer getQuestions(){
+        TypedArray chapters;
+        switch(getCurrLang()){
+            case de:
+                 chapters = getResources().obtainTypedArray(R.array.chapterQGer);
+                return chapters.getResourceId(getChapterNr(), 0);
+            case is:
+                chapters = getResources().obtainTypedArray(R.array.chapterQICE);
+                return chapters.getResourceId(getChapterNr(), 0);
+            case cn:
+                chapters = getResources().obtainTypedArray(R.array.chapterQCN);
+                return chapters.getResourceId(getChapterNr(), 0);
+            default:
+                return null;
+        }
+    }
+
+    private Integer getAnswers(){
+        TypedArray answers;
+        switch(getCurrLang()){
+            case de:
+                answers = getResources().obtainTypedArray(R.array.chapterAGer);
+                return answers.getResourceId(getChapterNr(), 0);
+            case is:
+                answers = getResources().obtainTypedArray(R.array.chapterAICE);
+                return answers.getResourceId(getChapterNr(), 0);
+            case cn:
+                answers = getResources().obtainTypedArray(R.array.chapterACN);
+                return answers.getResourceId(getChapterNr(), 0);
+            default:
+                return null;
+        }
+    }
+
+    private Integer getCorrectAnswers() {
+        TypedArray correct;
+        switch (getCurrLang()) {
+            case de:
+                correct = getResources().obtainTypedArray(R.array.chapterCGer);
+                return correct.getResourceId(getChapterNr(), 0);
+            case is:
+                correct = getResources().obtainTypedArray(R.array.chapterCICE);
+                return correct.getResourceId(getChapterNr(), 0);
+            case cn:
+                correct = getResources().obtainTypedArray(R.array.chapterCCN);
+                return correct.getResourceId(getChapterNr(), 0);
+            default:
+                return null;
+        }
+    }
+
+    private void fill(){
+        /*qlist.add(new TestQ(getString(R.string.TestQ1), getString(R.string.TestQ1An1),
+                getString(R.string.TestQ1An2), getString(R.string.TestQ1An3), getString(R.string.TestQ1An4), 1));
 
 
-    void fill(){
-        qlist.add(new TestQ("Wie geht es __", "dir", "dich", "du", "sie", 1));
-        qlist.add(new TestQ("Was machst __", "dir", "dich", "du", "sie", 3));
+*/
+        String[] questionsXML = getResources().getStringArray(getQuestions());
+        TypedArray answersXML = getResources().obtainTypedArray(getAnswers());
+
+        int[] correctXML = getResources().getIntArray(getCorrectAnswers());
+        //questions = new GrammarQ[questionsXML.length];
+        for(int i = 0; i<questionsXML.length;i++){
+            int id = answersXML.getResourceId(i, 0);
+            String[] aa = getResources().getStringArray(id);
+            qlist.add(new TestQ(questionsXML[i], aa[0], aa[1], aa[2], aa[3], correctXML[i]));
+        }
     }
 
     @Override
@@ -27,6 +97,8 @@ public class TestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         int chapterN=getIntent().getIntExtra("pos",0);
         setContentView(R.layout.activity_test_q);
+        getSupportActionBar().hide();
+
         if(chapterN==0)
             fill();
         final Button question=findViewById(R.id.questionTextB1);
@@ -36,10 +108,11 @@ public class TestActivity extends AppCompatActivity {
         final RadioButton rbd=findViewById(R.id.radioD);
         Button checkB=findViewById(R.id.checkButton);
         checkB.setBackgroundColor(getResources().getColor(R.color.button));
-        checkB.setTextColor(getResources().getColor(R.color.background));
+        //checkB.setTextColor(getResources().getColor(R.color.background));
         question.setBackgroundColor(getResources().getColor(R.color.button));
-        question.setTextColor(getResources().getColor(R.color.background));
+        //question.setTextColor(getResources().getColor(R.color.background));
         question.setText(qlist.get(currQ).getQuestion());
+
         rba.setText(qlist.get(currQ).getA());
         rbb.setText(qlist.get(currQ).getB());
         rbc.setText(qlist.get(currQ).getC());
@@ -73,10 +146,10 @@ public class TestActivity extends AppCompatActivity {
                         break;
                 }
                 if(f){
-                    Toast.makeText(getApplicationContext(), "Richtig!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.right), Toast.LENGTH_SHORT).show();
                     currQ++;
                     if(currQ==qlist.size()){
-                        Toast.makeText(getApplicationContext(), "Kapitel beendet!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), getString(R.string.chapter_end), Toast.LENGTH_SHORT).show();
                         Intent i=new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(i);
                     }else{
@@ -87,7 +160,7 @@ public class TestActivity extends AppCompatActivity {
                         rbd.setText(qlist.get(currQ).getD());
                     }
                 }else
-                    Toast.makeText(getApplicationContext(),"Leider falsch!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),getString(R.string.wrong),Toast.LENGTH_SHORT).show();
             }
         });
 

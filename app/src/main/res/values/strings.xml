@@ -9,6 +9,25 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="pr_fe">Prüfe</string>
-    <string name="kapitel">Kapitel</string>
+    <string name="pr_fe">Check</string>
+    <string name="chapter">Chapter</string>
+    <string name="wrong">Wrong!</string>
+    <string name="right">Right!</string>
+    <string name="chapter_end">Chapter end!</string>
+    <string name="GrammarEx1">Auf den gut __________________ Straßen meiner Stadt kann man auch nachts spazieren gehen. (beleuchten)</string>
+    <string name="GrammarEx2">Nach der __________________ Prüfung haben die Studenten gefeiert. (bestehen)</string>
+    <string name="GrammarEx3">. Ich habe die auf die Straße __________________ Verpackung in den Mülleimer getan. (wegwerfen)</string>
+    <string name="GrammarAnswer1">beleuchteten</string>
+    <string name="GrammarAnswer2">bestandenen</string>
+    <string name="GrammarAnswer3">weggeworfene</string>
+    <string name="TestQ1">Wie geht es __</string>
+    <string name="TestQ2">Was machst __</string>
+    <string name="TestQ1An1">dir</string>
+    <string name="TestQ1An2">dich</string>
+    <string name="TestQ1An3">du</string>
+    <string name="TestQ1An4">sie</string>
+    <string name="TestQ2An1">dir</string>
+    <string name="TestQ2An2">dich</string>
+    <string name="TestQ2An3">du</string>
+    <string name="TestQ2An4">sie</string>
 </resources>

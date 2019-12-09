@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="grammarQGER">
+      <item> "Frage 1"</item>
+      <item> "Frage 2"</item>
+      <item> "Frage 3"</item>
+  </string-array>
+    <string-array name="grammarAGER">
+        <item> "Antwort 1"</item>
+        <item> "Antwort 2"</item>
+        <item> "Antwort 3"</item>
+    </string-array>
+</resources>
